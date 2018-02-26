@@ -1,11 +1,11 @@
 <?php
-namespace Ultimate_Fields\PT\Type;
+namespace Ultimate_Fields\Post_Types\Type;
 
 use Ultimate_Fields\Container;
 use Ultimate_Fields\Field;
-use Ultimate_Fields\PT\Type;
+use Ultimate_Fields\Post_Types\Type;
 use Ultimate_Fields\UI\Post_Type as UI_Post_Type;
-use Ultimate_Fields\PT\Controller\Post_Type as Controller;
+use Ultimate_Fields\Post_Types\Controller\Post_Type as Controller;
 use Ultimate_Fields\UI\Dump_Beautifier;
 use Ultimate_Fields\Template;
 
@@ -19,7 +19,7 @@ class Post_Type extends Type {
 	 * Holds all existing post types from UPT.
 	 *
 	 * @since 3.0
-	 * @var Ultimate_Fields\PT\Controller\Post_Type[]
+	 * @var Ultimate_Fields\Post_Types\Controller\Post_Type[]
 	 */
 	protected $existing = array();
 
@@ -129,7 +129,7 @@ class Post_Type extends Type {
 		 * @since 3.0
 		 *
 		 * @param Ultimate_Fields\Container         $container The container with the custom settings.
-		 * @param Ultimate_Fields\PT\Type\Post_Type $object    The object that contains most of the necessary callbacks.
+		 * @param Ultimate_Fields\Post_Types\Type\Post_Type $object    The object that contains most of the necessary callbacks.
 		 */
 		do_action( 'upt.post_type.container', $container, $this );
 	}
@@ -141,7 +141,7 @@ class Post_Type extends Type {
 	 * @return Ultimate_Fields\Field[]
 	 */
 	public function main_tab_fields() {
-		if ( class_exists( 'Ultimate_Fields\\Field\\Icon' ) ) {
+		if ( class_exists( 'Ultimate_Fields\\Pro\\Field\\Icon' ) ) {
 			$icon_field = Field::create( 'icon', 'upt_pt_icon', __( 'Icon', 'ultimate-post-types' ) )
 				->add_set( 'dashicons' );
 		} else {

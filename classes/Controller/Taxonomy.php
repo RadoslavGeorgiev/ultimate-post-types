@@ -1,12 +1,12 @@
 <?php
-namespace Ultimate_Fields\PT\Controller;
+namespace Ultimate_Fields\Post_Types\Controller;
 
 use Ultimate_Fields\Container;
 use Ultimate_Fields\Field;
 use Ultimate_Fields\Datastore\Post_Meta as Post_Meta_Datastore;
 use Ultimate_Fields\Location\Taxonomy as Core_Location;
 use Ultimate_Fields\UI\Field_Helper;
-use Ultimate_Fields\PT\Controller;
+use Ultimate_Fields\Post_Types\Controller;
 
 /**
  *

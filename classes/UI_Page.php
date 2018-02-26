@@ -1,5 +1,5 @@
 <?php
-namespace Ultimate_Fields\PT;
+namespace Ultimate_Fields\Post_Types;
 
 use Ultimate_Fields\Template;
 
@@ -14,7 +14,7 @@ class UI_Page {
 	 *
 	 * @since 3.0
 	 *
-	 * @return Ultimate_Fields\PT\UI_page
+	 * @return Ultimate_Fields\Post_Types\UI_page
 	 */
 	public static function instance() {
 		static $instance;

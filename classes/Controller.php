@@ -1,5 +1,5 @@
 <?php
-namespace Ultimate_Fields\PT;
+namespace Ultimate_Fields\Post_Types;
 
 use Ultimate_Fields\Container;
 use Ultimate_Fields\Field;
@@ -62,7 +62,7 @@ abstract class Controller {
 		 *
 		 * @param mixed[]           $data       The data for the post type.
 		 * @param WP_Post           $post       The post that will be requested.
-		 * @param Ultimate_Fields\PT\Controller $controller The controller that is managing the content type.
+		 * @param Ultimate_Fields\Post_Types\Controller $controller The controller that is managing the content type.
 		 * @return mixed[]
 		 */
 		$this->data = apply_filters( 'upt.content_type.data', $data, $post, $this );

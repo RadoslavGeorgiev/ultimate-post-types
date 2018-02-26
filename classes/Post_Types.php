@@ -1,10 +1,12 @@
 <?php
-namespace Ultimate_Fields;
+namespace Ultimate_Fields\Post_Types;
 
-use Ultimate_Fields\PT\UI_Page;
-use Ultimate_Fields\PT\Type\Post_Type;
-use Ultimate_Fields\PT\Type\Taxonomy;
-use Ultimate_Fields\PT\Migration;
+use Ultimate_Fields\Post_Types\UI_Page;
+use Ultimate_Fields\Post_Types\Type\Post_Type;
+use Ultimate_Fields\Post_Types\Type\Taxonomy;
+use Ultimate_Fields\Post_Types\Migration;
+use Ultimate_Fields\Template;
+use Ultimate_Fields\Autoloader;
 
 /**
  * Adds the functionality for creating custom content types with Ultimate Fields.
@@ -43,9 +45,9 @@ class Post_Types {
 		define( 'ULTIMATE_FIELDS_PT_VER', '3.0' );
 
 		# Add an autoloader for the UI
-		spl_autoload_register( array( $this, 'autoload' ) );
+		new Autoloader( 'Ultimate_Fields\\Post_Types', __DIR__ );
 
-		if ( ! defined( 'ULTIMATE_FIELDS_ROOT_DIR' ) ) {
+		if ( ! defined( 'ULTIMATE_FIELDS_DIR' ) ) {
 			add_action( 'admin_notices', array( $this, 'missing_parent_notice' ) );
 			return;
 		}
@@ -59,7 +61,6 @@ class Post_Types {
 		/**
 		 * @todo: Add translations
 		 */
-
 
 		# Exclude the post types for managing UPT from being listed as options
 		add_filter( 'uf.excluded_post_types', array( $this, 'exclude_own_post_types' ) );

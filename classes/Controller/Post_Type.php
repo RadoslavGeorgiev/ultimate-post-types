@@ -1,7 +1,7 @@
 <?php
-namespace Ultimate_Fields\PT\Controller;
+namespace Ultimate_Fields\Post_Types\Controller;
 
-use Ultimate_Fields\PT\Controller;
+use Ultimate_Fields\Post_Types\Controller;
 use Ultimate_Fields\Location\Post_Type as Core_Location;
 use Ultimate_Fields\Container;
 use Ultimate_Fields\Datastore\Post_Meta as Post_Meta_Datastore;

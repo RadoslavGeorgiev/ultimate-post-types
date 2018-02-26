@@ -1,9 +1,9 @@
 <?php
-namespace Ultimate_Fields\PT;
+namespace Ultimate_Fields\Post_Types;
 
 use Ultimate_Fields\UI\Settings\Screen;
 use Ultimate_Fields\Template;
-use Ultimate_Fields\PT\Migration;
+use Ultimate_Fields\Post_Types\Migration;
 
 /**
  * Displays a page for migration of post types.

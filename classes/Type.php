@@ -1,5 +1,5 @@
 <?php
-namespace Ultimate_Fields\PT;
+namespace Ultimate_Fields\Post_Types;
 
 use Ultimate_Fields\UI\Field_Editor;
 use Ultimate_Fields\Template;
@@ -15,7 +15,7 @@ abstract class Type {
 	 *
 	 * @since 3.0
 	 *
-	 * @return Ultimate_Fields\PT\Type The instance of the type.
+	 * @return Ultimate_Fields\Post_Types\Type The instance of the type.
 	 */
 	 public static function init() {
 		 static $instances;
@@ -130,6 +130,7 @@ abstract class Type {
  		wp_enqueue_script( 'uf-ui-editor' );
  		wp_enqueue_script( 'uf-pt', ULTIMATE_FIELDS_PT_URL . 'assets/ultimate-post-types.js', array( 'uf-ui-editor' ), ULTIMATE_FIELDS_PT_VER, true );
 		wp_dequeue_script( 'autosave' );
+		wp_enqueue_style( 'uf-ui' );
 
  		$GLOBALS[ 'wp_scripts' ]->query( 'uf-initialize', 'registered' )->deps[] = 'uf-ui-conditional-logic-field';
 

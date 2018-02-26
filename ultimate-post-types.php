@@ -1,21 +1,23 @@
 <?php
 /**
- * Plugin Name: Ultimate Post Types 2
- * Plugin URI: http://post-types.ultimate-fields.com/
+ * Plugin Name: Ultimate Post Types
+ * Plugin URI: https://www.ultimate-fields.com/docs/ultimate-post-types/
  * Description: An add-on for Ultimate Fields, which allows creating post types and assign fields to them.
- * Version: 3.0a
+ * Version: 3.0
  * Author: Radoslav Georgiev
- * Author URI: http://rageorgiev.com/
+ * Author URI: https://rageorgiev.com/
  * Copyright: Radoslav Georgiev
  */
 
 /**
- * Load the important files for Ultimate Post Types.
+ * Loads the files of Ultimate Post Types after Ultimate Fields/Ultimate Fields Pro.
  *
- * @since 2.0
+ * @since 3.0
  */
-require_once __DIR__ . '/Post_Types.php';
-add_action( 'plugins_loaded', 'upt_load' );
-function upt_load() {
-	Ultimate_Fields\Post_Types::instance( __FILE__ );
+add_action( 'plugins_loaded', 'load_ultimate_post_types', 11 );
+function load_ultimate_post_types() {
+   define( 'ULTIMATE_POST_TYPES_PLUGIN_FILE', __FILE__ );
+
+   require_once __DIR__ . '/classes/Post_Types.php';
+   Ultimate_Fields\Post_Types\Post_Types::instance( __FILE__ );
 }

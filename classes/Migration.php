@@ -1,13 +1,13 @@
 <?php
-namespace Ultimate_Fields\PT;
+namespace Ultimate_Fields\Post_Types;
 
 use Ultimate_Fields\UI\Migration as UI_Migration;
-use Ultimate_Fields\PT\Migration_Page as Migration_Page;
+use Ultimate_Fields\Post_Types\Migration_Page as Migration_Page;
 use Ultimate_Fields\Helper\V1_Migrator;
 use Ultimate_Fields\Container;
 use Ultimate_Fields\UI\Field_Helper;
-use Ultimate_Fields\PT\Type\Post_Type;
-use Ultimate_Fields\PT\Type\Taxonomy;
+use Ultimate_Fields\Post_Types\Type\Post_Type;
+use Ultimate_Fields\Post_Types\Type\Taxonomy;
 
 /**
  * Handles the migration of data for Ultimate Post Types, from v1 to v3.

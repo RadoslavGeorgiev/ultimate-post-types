@@ -1,10 +1,10 @@
 <?php
-namespace Ultimate_Fields\PT\Type;
+namespace Ultimate_Fields\Post_Types\Type;
 
 use Ultimate_Fields\Container;
 use Ultimate_Fields\Field;
-use Ultimate_Fields\PT\Type;
-use Ultimate_Fields\PT\Controller\Taxonomy as Controller;
+use Ultimate_Fields\Post_Types\Type;
+use Ultimate_Fields\Post_Types\Controller\Taxonomy as Controller;
 use Ultimate_Fields\UI\Dump_Beautifier;
 use Ultimate_Fields\Template;
 
@@ -18,7 +18,7 @@ class Taxonomy extends Type {
 	 * Holds all existing taxonomies from UPT.
 	 *
 	 * @since 3.0
-	 * @var Ultimate_Fields\PT\Controller\Taxonomy[]
+	 * @var Ultimate_Fields\Post_Types\Controller\Taxonomy[]
 	 */
 	protected $existing = array();
 
@@ -121,7 +121,7 @@ class Taxonomy extends Type {
 		 * @since 3.0
 		 *
 		 * @param Ultimate_Fields\Container        $container The container with the custom settings.
-		 * @param Ultimate_Fields\PT\Type\Taxonomy $object    The object that contains most of the necessary callbacks.
+		 * @param Ultimate_Fields\Post_Types\Type\Taxonomy $object    The object that contains most of the necessary callbacks.
 		 */
 		do_action( 'upt.taxonomy.container', $container, $this );
 	}
