@@ -35,6 +35,17 @@ class Post_Type extends Type {
 	}
 
 	/**
+	 * Adds additional callbacks for the post type.
+	 *
+	 * @since 3.0
+	 */
+	public function __construct() {
+		parent::__construct();
+
+		add_action( 'uf.ui.export_after', array( $this, 'export_type_appearance_to_php' ), 10, 2 );
+	}
+
+	/**
 	 * Registers the post type for managing post types in the admin.
 	 *
 	 * @since 3.0
@@ -580,6 +591,40 @@ class Post_Type extends Type {
 		Template::instance()->include_template( 'post-types/post-type-php-export.php', array(
 			'pairs'         => $pairs,
 			'function_name' => 'uf_post_types_' . round( microtime( true ) )
+		));
+	}
+
+	/**
+	 * Exports additional (appearance) functions after the standard export.
+	 *
+	 * @since 3.0
+	 *
+	 *
+	 * @param int[]   $ids The IDs that should be exported.
+	 * @param mixed[] $args The arguments for the export.
+	 */
+	public function export_type_appearance_to_php( $ids, $args ) {
+		$items = array();
+
+		foreach( $ids as $id ) {
+			if( ! isset( $this->existing[ $id ] ) )
+				continue;
+
+			$items[] = array(
+				'prefix'         => 'uf_post_types_' . round( microtime( true ) ) . '_',
+				'slug'           => $this->existing[ $id ]->get_slug(),
+				'before_content' => $this->existing[ $id ]->before_content,
+				'after_content'  => $this->existing[ $id ]->after_content,
+				'template_type'  => $this->existing[ $id ]->template_type,
+			);
+		}
+
+		if( empty( $items ) ) {
+			return;
+		}
+
+		Template::instance()->include_template( 'post-types/post-type-php-export-features.php', array(
+			'items'  => $items
 		));
 	}
 }

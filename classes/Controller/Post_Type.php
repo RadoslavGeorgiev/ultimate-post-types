@@ -2,7 +2,7 @@
 namespace Ultimate_Fields\Post_Types\Controller;
 
 use Ultimate_Fields\Post_Types\Controller;
-use Ultimate_Fields\Location\Post_Type as Core_Location;
+use Ultimate_Fields\Location;
 use Ultimate_Fields\Container;
 use Ultimate_Fields\Datastore\Post_Meta as Post_Meta_Datastore;
 use Ultimate_Fields\Field;
@@ -141,7 +141,7 @@ class Post_Type extends Controller {
 
 		$this->container = $this->register_fields(
 			isset( $this->data[ 'fields' ] ) ? $this->data[ 'fields' ] : array(),
-			new Core_Location( $this->data[ 'slug' ] )
+			Location::create( 'post_type', $this->data[ 'slug' ] )
 		);
 
 		# Rewrite the template
