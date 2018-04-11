@@ -44,13 +44,13 @@ class Post_Types {
 		define( 'ULTIMATE_FIELDS_PT_URL', plugins_url( '/', $path ) );
 		define( 'ULTIMATE_FIELDS_PT_VER', '3.0' );
 
-		# Add an autoloader for the UI
-		new Autoloader( 'Ultimate_Fields\\Post_Types', __DIR__ );
-
 		if ( ! defined( 'ULTIMATE_FIELDS_DIR' ) ) {
 			add_action( 'admin_notices', array( $this, 'missing_parent_notice' ) );
 			return;
 		}
+
+		# Add an autoloader for the UI
+		new Autoloader( 'Ultimate_Fields\\Post_Types', __DIR__ );
 
 		# Initialize everything else when UF is available.
 		add_filter( 'uf.register_ui', array( $this, 'register' ), 30 );
