@@ -28,7 +28,7 @@ class Migration_Page extends Screen {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Post Types & Taxonomies Migration', 'ultimate-post-types' );
+		return __( 'Post Types & Taxonomies Migration', 'upt' );
 	}
 
 	/**

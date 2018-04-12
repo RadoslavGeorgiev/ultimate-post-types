@@ -1,0 +1,883 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ultimate Post Types 3\n"
+"POT-Creation-Date: 2018-04-12 14:40+0200\n"
+"PO-Revision-Date: 2018-04-12 14:40+0200\n"
+"Last-Translator: \n"
+"Language-Team: Radoslav Georgiev (rageorgiev@gmail.com)\n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e;_x:1,2c;_n;_n:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: classes/Controller/Post_Type.php:80 classes/Controller/Post_Type.php:81
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: classes/Controller/Post_Type.php:82 classes/Controller/Post_Type.php:83
+#, php-format
+msgid "Add %s"
+msgstr ""
+
+#: classes/Controller/Post_Type.php:84 classes/Controller/Taxonomy.php:40
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: classes/Controller/Post_Type.php:85
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: classes/Controller/Post_Type.php:86
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: classes/Controller/Post_Type.php:87 classes/Controller/Taxonomy.php:39
+#, php-format
+msgid "Search %s"
+msgstr ""
+
+#: classes/Controller/Post_Type.php:88
+#, php-format
+msgid "No %s found"
+msgstr ""
+
+#: classes/Controller/Post_Type.php:89
+#, php-format
+msgid "No %s found in Trash"
+msgstr ""
+
+#: classes/Controller/Post_Type.php:90
+#, php-format
+msgid "Parent %s:"
+msgstr ""
+
+#: classes/Controller/Taxonomy.php:36
+#, php-format
+msgid "Popular %s"
+msgstr ""
+
+#: classes/Controller/Taxonomy.php:37
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: classes/Controller/Taxonomy.php:38
+#, php-format
+msgid "Update %s"
+msgstr ""
+
+#: classes/Controller/Taxonomy.php:41
+#, php-format
+msgid "Add New %s"
+msgstr ""
+
+#: classes/Controller/Taxonomy.php:42
+#, php-format
+msgid "New %s Name"
+msgstr ""
+
+#: classes/Controller/Taxonomy.php:43
+#, php-format
+msgid "Separate %s with commas"
+msgstr ""
+
+#: classes/Controller/Taxonomy.php:44
+#, php-format
+msgid "Add or remove %s"
+msgstr ""
+
+#: classes/Controller/Taxonomy.php:45
+#, php-format
+msgid "Choose from the most used %s"
+msgstr ""
+
+#: classes/Controller/Taxonomy.php:46
+#, php-format
+msgid "No %s found."
+msgstr ""
+
+#: classes/Migration.php:89
+msgid "Thank you for updating to Ultimate Post Types 2!"
+msgstr ""
+
+#: classes/Migration.php:93
+#, php-format
+msgid ""
+"There is %s post type or taxonomy that needs to be migrated from Ultimate "
+"Post Types version 1 to version 2."
+msgid_plural ""
+"There are %s post types or taxonomies that need to be migrated from Ultimate "
+"Post Types version 1 to version 2."
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/Migration.php:100
+msgid ""
+"Those post types and taxonomies will not be active until you migrate them, "
+"as the structure of Ultimate Post Types 2 is completely different and they "
+"cannot be loaded."
+msgstr ""
+
+#: classes/Migration.php:105
+msgid "Go to the migration page"
+msgstr ""
+
+#: classes/Migration_Page.php:31
+msgid "Post Types & Taxonomies Migration"
+msgstr ""
+
+#: classes/Post_Types.php:147
+msgid ""
+"The Ultimate Post Types plugin is active, but it will not work until it&apos;"
+"s dependency &quot;Ultimate Fields&quot; is active too. Please <a href="
+"\"https://www.ultimate-fields.com/docs/quick-start/installation/\" target="
+"\"_blank\">install Ultimate Fields</a>."
+msgstr ""
+
+#: classes/Type.php:182
+msgid "Publish"
+msgstr ""
+
+#: classes/Type/Post_Type.php:72 classes/Type/Post_Type.php:83
+#: classes/Type/Post_Type.php:506 classes/Type/Taxonomy.php:146
+#: classes/UI_Page.php:44
+msgid "Post Types"
+msgstr ""
+
+#: classes/Type/Post_Type.php:73
+msgid "Post Type"
+msgstr ""
+
+#: classes/Type/Post_Type.php:74 classes/Type/Post_Type.php:75
+msgid "Add Post Type"
+msgstr ""
+
+#: classes/Type/Post_Type.php:76
+msgid "Edit Post Type"
+msgstr ""
+
+#: classes/Type/Post_Type.php:77
+msgid "New Post Type"
+msgstr ""
+
+#: classes/Type/Post_Type.php:78
+msgid "View Post Type"
+msgstr ""
+
+#: classes/Type/Post_Type.php:79
+msgid "Search Post Types"
+msgstr ""
+
+#: classes/Type/Post_Type.php:80
+msgid "No Post Types found"
+msgstr ""
+
+#: classes/Type/Post_Type.php:81
+msgid "No Post Types found in Trash"
+msgstr ""
+
+#: classes/Type/Post_Type.php:82
+msgid "Parent Post Type:"
+msgstr ""
+
+#: classes/Type/Post_Type.php:111 classes/Type/Taxonomy.php:100
+msgid "Slug & Labels"
+msgstr ""
+
+#: classes/Type/Post_Type.php:115
+msgid "General"
+msgstr ""
+
+#: classes/Type/Post_Type.php:119 classes/Type/Taxonomy.php:106
+msgid "URLs"
+msgstr ""
+
+#: classes/Type/Post_Type.php:123 classes/Type/Post_Type.php:383
+#: classes/Type/Taxonomy.php:109 classes/Type/Taxonomy.php:257
+msgid "Fields"
+msgstr ""
+
+#: classes/Type/Post_Type.php:128
+msgid "Appearance"
+msgstr ""
+
+#: classes/Type/Post_Type.php:132
+msgid "Post Type Settings"
+msgstr ""
+
+#: classes/Type/Post_Type.php:156 classes/Type/Post_Type.php:159
+msgid "Icon"
+msgstr ""
+
+#: classes/Type/Post_Type.php:164 classes/Type/Post_Type.php:357
+#: classes/Type/Post_Type.php:433 classes/Type/Taxonomy.php:137
+#: classes/Type/Taxonomy.php:238 classes/Type/Taxonomy.php:312
+msgid "Slug"
+msgstr ""
+
+#: classes/Type/Post_Type.php:165
+msgid ""
+"This slug will be used when quierying posts from the post type or in URLs by "
+"default. It must be unique and not among the reserved <a href=\"http://codex."
+"wordpress.org/Function_Reference/register_post_type#Reserved_Post_Types\" "
+"target=\"_blank\">post types</a>. Please use only lowercase letters, dashes "
+"and numbers!"
+msgstr ""
+
+#: classes/Type/Post_Type.php:168
+msgid "This icon wil appear in the admin menu."
+msgstr ""
+
+#: classes/Type/Post_Type.php:169 classes/Type/Taxonomy.php:140
+msgid "Plural Name"
+msgstr ""
+
+#: classes/Type/Post_Type.php:170
+msgid "This is plural name of the post type (e.g. Books)."
+msgstr ""
+
+#: classes/Type/Post_Type.php:172 classes/Type/Taxonomy.php:143
+msgid "Singular Name"
+msgstr ""
+
+#: classes/Type/Post_Type.php:173
+msgid "This is the singular name of the post type (e.g. Book)."
+msgstr ""
+
+#: classes/Type/Post_Type.php:175
+msgid "Fine-tune labels"
+msgstr ""
+
+#: classes/Type/Post_Type.php:178
+msgid ""
+"All other labels for the post type are generated automatically by using the "
+"&quot;Name&quot; &amp; &quot;Singular Name&quot; fields&apos; values. If you "
+"want to change a detail in those labels, check this."
+msgstr ""
+
+#: classes/Type/Post_Type.php:180
+msgid "Labels"
+msgstr ""
+
+#: classes/Type/Post_Type.php:182
+msgid "Add New"
+msgstr ""
+
+#: classes/Type/Post_Type.php:183
+msgid "The label for adding in the post type&apos;s section (e.g. Add Book)."
+msgstr ""
+
+#: classes/Type/Post_Type.php:185 classes/Type/Taxonomy.php:155
+msgid "Add New Item"
+msgstr ""
+
+#: classes/Type/Post_Type.php:186
+msgid ""
+"The adding label that will appear in other places of the admin/front end. (e."
+"g. Add New Book)."
+msgstr ""
+
+#: classes/Type/Post_Type.php:188 classes/Type/Taxonomy.php:158
+msgid "Edit Item"
+msgstr ""
+
+#: classes/Type/Post_Type.php:189
+msgid "The Edit Item label (e.g. Edit Book)."
+msgstr ""
+
+#: classes/Type/Post_Type.php:191
+msgid "New Item"
+msgstr ""
+
+#: classes/Type/Post_Type.php:192
+msgid "The New Item label (e.g. New Book)."
+msgstr ""
+
+#: classes/Type/Post_Type.php:194
+msgid "View Item"
+msgstr ""
+
+#: classes/Type/Post_Type.php:195
+msgid "The View Item label (e.g. View Book)."
+msgstr ""
+
+#: classes/Type/Post_Type.php:197 classes/Type/Taxonomy.php:161
+msgid "Search Items"
+msgstr ""
+
+#: classes/Type/Post_Type.php:198
+msgid "The Search Items label (e.g. Search Books)."
+msgstr ""
+
+#: classes/Type/Post_Type.php:200 classes/Type/Taxonomy.php:164
+msgid "Not Found"
+msgstr ""
+
+#: classes/Type/Post_Type.php:201
+msgid "The Not Found label (e.g. No Books found)."
+msgstr ""
+
+#: classes/Type/Post_Type.php:203
+msgid "Not Found In Trash"
+msgstr ""
+
+#: classes/Type/Post_Type.php:204
+msgid "The Not Found In Trash label (e.g. No Books found in Trash)."
+msgstr ""
+
+#: classes/Type/Post_Type.php:206 classes/Type/Taxonomy.php:167
+msgid "Parent Item Colon"
+msgstr ""
+
+#: classes/Type/Post_Type.php:207
+msgid "The Parent Item Colon label (e.g. Parent Book)."
+msgstr ""
+
+#: classes/Type/Post_Type.php:222 classes/Type/Taxonomy.php:201
+msgid "Hierarchical"
+msgstr ""
+
+#: classes/Type/Post_Type.php:225
+msgid ""
+"Allows Parent to be specified. In the &apos;supports&apos; tab, please check "
+"&apos;page-attributes&apos; to show the parent select box on the editor page."
+msgstr ""
+
+#: classes/Type/Post_Type.php:226 classes/Type/Taxonomy.php:205
+msgid "Public"
+msgstr ""
+
+#: classes/Type/Post_Type.php:229 classes/Type/Taxonomy.php:208
+msgid "Controls how the type is visible to authors and readers."
+msgstr ""
+
+#: classes/Type/Post_Type.php:230
+msgid "Show In Menu"
+msgstr ""
+
+#: classes/Type/Post_Type.php:233
+msgid "Whether to show the post type in the admin menu."
+msgstr ""
+
+#: classes/Type/Post_Type.php:234
+msgid "Menu order"
+msgstr ""
+
+#: classes/Type/Post_Type.php:238
+msgid "Default<em>: Appear before the Appearance section</em>"
+msgstr ""
+
+#: classes/Type/Post_Type.php:239
+msgid "Specific position"
+msgstr ""
+
+#: classes/Type/Post_Type.php:242
+msgid "Menu Position"
+msgstr ""
+
+#: classes/Type/Post_Type.php:245
+msgid ""
+"Be careful with this setting, because you might silently overwrite another "
+"items as WordPress does not check if the particular position is free."
+msgstr ""
+
+#: classes/Type/Post_Type.php:246
+msgid "Advanced Settings"
+msgstr ""
+
+#: classes/Type/Post_Type.php:247
+msgid ""
+"Please don't edit those settings unless you really know what you are doing!"
+msgstr ""
+
+#: classes/Type/Post_Type.php:248 classes/Type/Taxonomy.php:209
+msgid "Show UI"
+msgstr ""
+
+#: classes/Type/Post_Type.php:251
+msgid ""
+"Whether to generate a default UI for managing this post type in the admin."
+msgstr ""
+
+#: classes/Type/Post_Type.php:252
+msgid "Show In Admin Bar"
+msgstr ""
+
+#: classes/Type/Post_Type.php:255
+msgid "Whether to make this post type available in the WordPress admin bar."
+msgstr ""
+
+#: classes/Type/Post_Type.php:256 classes/Type/Taxonomy.php:213
+msgid "Show In Nav Menus"
+msgstr ""
+
+#: classes/Type/Post_Type.php:260
+msgid "Whether post_type is available for selection in navigation menus."
+msgstr ""
+
+#: classes/Type/Post_Type.php:261
+msgid "Publicly Queryable"
+msgstr ""
+
+#: classes/Type/Post_Type.php:265
+msgid "Whether queries can be performed on the front end."
+msgstr ""
+
+#: classes/Type/Post_Type.php:266
+msgid "Exclude from Search"
+msgstr ""
+
+#: classes/Type/Post_Type.php:270
+msgid ""
+"Whether to exclude posts with this post type from front end search results."
+msgstr ""
+
+#: classes/Type/Post_Type.php:271
+msgid "Has Archive"
+msgstr ""
+
+#: classes/Type/Post_Type.php:275
+msgid "Enables post type archives."
+msgstr ""
+
+#: classes/Type/Post_Type.php:276
+msgid "Can Export"
+msgstr ""
+
+#: classes/Type/Post_Type.php:279
+msgid "Can this post type be exported."
+msgstr ""
+
+#: classes/Type/Post_Type.php:280
+msgid "Supports"
+msgstr ""
+
+#: classes/Type/Post_Type.php:281
+msgid "Title"
+msgstr ""
+
+#: classes/Type/Post_Type.php:283
+msgid "Allow the post type posts to have a title."
+msgstr ""
+
+#: classes/Type/Post_Type.php:285
+msgid "Editor"
+msgstr ""
+
+#: classes/Type/Post_Type.php:287
+msgid ""
+"Allow the post type posts to have content, entered through the TinyMCE "
+"(WYSIWYG) editor."
+msgstr ""
+
+#: classes/Type/Post_Type.php:289
+msgid "Author"
+msgstr ""
+
+#: classes/Type/Post_Type.php:291
+msgid "Allow administrators to choose who is the author of the current post."
+msgstr ""
+
+#: classes/Type/Post_Type.php:292
+msgid "Thumbnail"
+msgstr ""
+
+#: classes/Type/Post_Type.php:294
+msgid ""
+"Allow setting a featured image to the post. <strong>Please</strong> be sure "
+"that your theme supprts <strong>post-thumbnails</strong>"
+msgstr ""
+
+#: classes/Type/Post_Type.php:296
+msgid "Excerpt"
+msgstr ""
+
+#: classes/Type/Post_Type.php:298
+msgid ""
+"The WordPress Excerpt is an optional summary or description of a post; in "
+"short, a post summary"
+msgstr ""
+
+#: classes/Type/Post_Type.php:300
+msgid "Trackbacks"
+msgstr ""
+
+#: classes/Type/Post_Type.php:302
+msgid "A trackback is a way of cross referencing two blog posts. "
+msgstr ""
+
+#: classes/Type/Post_Type.php:304
+msgid "Custom Fields"
+msgstr ""
+
+#: classes/Type/Post_Type.php:306
+msgid ""
+"Allow managing custom fields by the default WordPress way. If you are "
+"planning to add fields generated by Ultimate Fields, you will prefer to "
+"leave this unchecked!"
+msgstr ""
+
+#: classes/Type/Post_Type.php:308
+msgid "Comments"
+msgstr ""
+
+#: classes/Type/Post_Type.php:312
+msgid "Revisions"
+msgstr ""
+
+#: classes/Type/Post_Type.php:314
+msgid "Allow the storing of revisions"
+msgstr ""
+
+#: classes/Type/Post_Type.php:316
+msgid "Page Attributes"
+msgstr ""
+
+#: classes/Type/Post_Type.php:318
+msgid ""
+"Display a box that contains the menu order field, or parent option for "
+"hierarchical post types."
+msgstr ""
+
+#: classes/Type/Post_Type.php:320
+msgid "Post Formats"
+msgstr ""
+
+#: classes/Type/Post_Type.php:322
+msgid ""
+"Allow the post type to have formats like video, photo, quote, etc. Select "
+"the formats in the next field."
+msgstr ""
+
+#: classes/Type/Post_Type.php:324
+msgid "Supported Formats"
+msgstr ""
+
+#: classes/Type/Post_Type.php:328
+msgid "Aside"
+msgstr ""
+
+#: classes/Type/Post_Type.php:329
+msgid "Audio"
+msgstr ""
+
+#: classes/Type/Post_Type.php:330
+msgid "Chat"
+msgstr ""
+
+#: classes/Type/Post_Type.php:331
+msgid "Gallery"
+msgstr ""
+
+#: classes/Type/Post_Type.php:332
+msgid "Image"
+msgstr ""
+
+#: classes/Type/Post_Type.php:333
+msgid "Link"
+msgstr ""
+
+#: classes/Type/Post_Type.php:334
+msgid "Quote"
+msgstr ""
+
+#: classes/Type/Post_Type.php:335
+msgid "Status"
+msgstr ""
+
+#: classes/Type/Post_Type.php:336
+msgid "Video"
+msgstr ""
+
+#: classes/Type/Post_Type.php:352 classes/Type/Taxonomy.php:236
+msgid "Enable URL rewrite"
+msgstr ""
+
+#: classes/Type/Post_Type.php:354
+msgid "Enable"
+msgstr ""
+
+#: classes/Type/Post_Type.php:358
+msgid "Customize the permalink structure slug, ex. <strong>books</strong>/"
+msgstr ""
+
+#: classes/Type/Post_Type.php:359 classes/Type/Taxonomy.php:240
+msgid "With Front"
+msgstr ""
+
+#: classes/Type/Post_Type.php:360
+msgid "Include the blog base for the URLs of this post type."
+msgstr ""
+
+#: classes/Type/Post_Type.php:362
+msgid "Feeds"
+msgstr ""
+
+#: classes/Type/Post_Type.php:363
+msgid "Should a feed permalink structure be built for this post type."
+msgstr ""
+
+#: classes/Type/Post_Type.php:366
+msgid "Pages"
+msgstr ""
+
+#: classes/Type/Post_Type.php:367
+msgid "Should the permalink structure provide for pagination."
+msgstr ""
+
+#: classes/Type/Post_Type.php:401
+msgid "Use the post template."
+msgstr ""
+
+#: classes/Type/Post_Type.php:402
+msgid "Use the default page template."
+msgstr ""
+
+#: classes/Type/Post_Type.php:406
+#, php-format
+msgid "Use the &quot;%s&quot; page template."
+msgstr ""
+
+#: classes/Type/Post_Type.php:410
+msgid "Template Type"
+msgstr ""
+
+#: classes/Type/Post_Type.php:414
+msgid "Before Content"
+msgstr ""
+
+#: classes/Type/Post_Type.php:415
+msgid "After Content"
+msgstr ""
+
+#: classes/Type/Post_Type.php:416
+msgid ""
+"This content will be displayed before/after the content of the post type, in "
+"the template that is selected above. You can use shorcodes like [value key="
+"\"meta_key\"] to display values that are associated with the current post "
+"type in order to create a template for it. <strong>meta_key</strong> is the "
+"key of the field as created int the <strong>Fields</strong> tab."
+msgstr ""
+
+#: classes/Type/Post_Type.php:434 classes/Type/Taxonomy.php:313
+msgid "Singular name"
+msgstr ""
+
+#: classes/Type/Post_Type.php:435 classes/Type/Taxonomy.php:314
+msgid "Plural name"
+msgstr ""
+
+#: classes/Type/Post_Type.php:481 classes/Type/Taxonomy.php:360
+msgid "Taxonomy saved."
+msgstr ""
+
+#: classes/Type/Taxonomy.php:60 classes/Type/Taxonomy.php:71
+#: classes/Type/Taxonomy.php:385
+msgid "Taxonomies"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:61
+msgid "Taxonomy"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:62 classes/Type/Taxonomy.php:63
+msgid "Add Taxonomy"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:64
+msgid "Edit Taxonomy"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:65
+msgid "New Taxonomy"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:66
+msgid "View Taxonomy"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:67
+msgid "Search Taxonomies"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:68
+msgid "No Taxonomies found"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:69
+msgid "No Taxonomies found in Trash"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:70
+msgid "Parent Taxonomy:"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:103
+msgid "General Settings"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:113
+msgid "Taxonomy Settings"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:138
+msgid ""
+"This slug will be used when quierying posts from the post type or in URLs by "
+"default. Please use only lowercase letters, dashes and numbers!"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:142
+msgid "This is plural name of the taxonomy (e.g. Categories)."
+msgstr ""
+
+#: classes/Type/Taxonomy.php:145
+msgid "This is the singular name of the taxonomy (e.g. Category)."
+msgstr ""
+
+#: classes/Type/Taxonomy.php:150
+msgid "The taxonomy will be associated with those post types."
+msgstr ""
+
+#: classes/Type/Taxonomy.php:151
+msgid "Fine tune labels"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:154
+msgid ""
+"All other labels for the taxonomy are generated automatically by using the "
+"\"Name\" & \"Singular Name\" fields&apos; values. If you want to change a "
+"detail in those labels, check this."
+msgstr ""
+
+#: classes/Type/Taxonomy.php:156
+msgid ""
+"The adding label that will appear in other places of the admin/front end. (e."
+"g. Add New Page)."
+msgstr ""
+
+#: classes/Type/Taxonomy.php:159
+msgid "The Edit Item label (e.g. Edit Page)."
+msgstr ""
+
+#: classes/Type/Taxonomy.php:162
+msgid "The Search Items label (e.g. Search Pages)."
+msgstr ""
+
+#: classes/Type/Taxonomy.php:165
+msgid "The Not Found label (e.g. No Pages found)."
+msgstr ""
+
+#: classes/Type/Taxonomy.php:168
+msgid "The Parent Item Colon label (e.g. Parent Page)."
+msgstr ""
+
+#: classes/Type/Taxonomy.php:170
+msgid "Popular Items"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:171
+msgid "Popular Writers"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:173
+msgid "All Items"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:174
+msgid "Ex. All Writers"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:176
+msgid "New Item Name"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:177
+msgid "New Writer Name"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:179
+msgid "Separate Items With Commas"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:180
+msgid "Separate writers with commas"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:182
+msgid "Add Or Remove Items"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:183
+msgid "Add or remove writers"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:185
+msgid "Choose From Most Used"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:186
+msgid "Choose from the most used writers"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:204
+msgid ""
+"Allows Parent to be specified. Also, non-hierarchical taxonomies work like "
+"tags, meaning that on post type screens the user has to manually enter terms "
+"manually."
+msgstr ""
+
+#: classes/Type/Taxonomy.php:212
+msgid ""
+"Whether to generate a default UI for managing this taxonomy in the admin."
+msgstr ""
+
+#: classes/Type/Taxonomy.php:217
+msgid "Whether the taxonomy is available for selection in navigation menus."
+msgstr ""
+
+#: classes/Type/Taxonomy.php:218
+msgid "Show admin column"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:222
+msgid "Show the taxonomy terms in the post type listing."
+msgstr ""
+
+#: classes/Type/Taxonomy.php:239
+msgid "Customize the permalink structure slug, ex. <strong>genre</strong>/"
+msgstr ""
+
+#: classes/Type/Taxonomy.php:242
+msgid "Include the blog base for the URLs of this taxonomy."
+msgstr ""
+
+#: templates/post-types/migration.php:3
+msgid ""
+"Version two of Ultimate Post Types stores its fields in a different way, "
+"which requires you to migrate your post types and taxonomies from version "
+"one, in order to use them."
+msgstr ""
+
+#: templates/post-types/migration.php:5
+msgid ""
+"The process will not delete your old post types and taxonomies, so you can "
+"go back to the previous version if you experience compatibility issues."
+msgstr ""
+
+#: templates/post-types/migration.php:7
+msgid "The following post types and taxonomies will be migrated:"
+msgstr ""
+
+#: templates/post-types/migration.php:19
+msgid "Migrate"
+msgstr ""

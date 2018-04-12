@@ -77,17 +77,17 @@ class Post_Type extends Controller {
 
 		# Generate the default labels
 		$labels = array(
-			'name'                => sprintf( __( '%s', 'ultimate-post-types' ),                   $plural ),
-			'singular_name'       => sprintf( __( '%s', 'ultimate-post-types' ),                   $singular ),
-			'add_new'             => sprintf( __( 'Add %s', 'ultimate-post-types' ),               $singular ),
-			'add_new_item'        => sprintf( __( 'Add %s', 'ultimate-post-types' ),               $singular ),
-			'edit_item'           => sprintf( __( 'Edit %s', 'ultimate-post-types' ),              $singular ),
-			'new_item'            => sprintf( __( 'New %s', 'ultimate-post-types' ),               $singular ),
-			'view_item'           => sprintf( __( 'View %s', 'ultimate-post-types' ),              $singular ),
-			'search_items'        => sprintf( __( 'Search %s', 'ultimate-post-types' ),            $plural ),
-			'not_found'           => sprintf( __( 'No %s found', 'ultimate-post-types' ),          $plural ),
-			'not_found_in_trash'  => sprintf( __( 'No %s found in Trash', 'ultimate-post-types' ), $plural ),
-			'parent_item_colon'   => sprintf( __( 'Parent %s:', 'ultimate-post-types' ),           $singular ),
+			'name'                => sprintf( __( '%s', 'upt' ),                   $plural ),
+			'singular_name'       => sprintf( __( '%s', 'upt' ),                   $singular ),
+			'add_new'             => sprintf( __( 'Add %s', 'upt' ),               $singular ),
+			'add_new_item'        => sprintf( __( 'Add %s', 'upt' ),               $singular ),
+			'edit_item'           => sprintf( __( 'Edit %s', 'upt' ),              $singular ),
+			'new_item'            => sprintf( __( 'New %s', 'upt' ),               $singular ),
+			'view_item'           => sprintf( __( 'View %s', 'upt' ),              $singular ),
+			'search_items'        => sprintf( __( 'Search %s', 'upt' ),            $plural ),
+			'not_found'           => sprintf( __( 'No %s found', 'upt' ),          $plural ),
+			'not_found_in_trash'  => sprintf( __( 'No %s found in Trash', 'upt' ), $plural ),
+			'parent_item_colon'   => sprintf( __( 'Parent %s:', 'upt' ),           $singular ),
 		);
 
 		# Add the main label

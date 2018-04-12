@@ -86,23 +86,23 @@ class Migration extends UI_Migration {
 		}
 
 		$count = intval( get_option( $this->option_key . '_pending' ) );
-		$text  = __( 'Thank you for updating to Ultimate Post Types 2!', 'ultimate-post-types' );
+		$text  = __( 'Thank you for updating to Ultimate Post Types 2!', 'upt' );
 
 		$text .= ' ' . sprintf(
 		    _n(
 				'There is %s post type or taxonomy that needs to be migrated from Ultimate Post Types version 1 to version 2.',
 				'There are %s post types or taxonomies that need to be migrated from Ultimate Post Types version 1 to version 2.',
-				$count, 'ultimate-post-types'
+				$count, 'upt'
 			),
 		    $count
 		);
 
-		$text .= "\n\n" . __( 'Those post types and taxonomies will not be active until you migrate them, as the structure of Ultimate Post Types 2 is completely different and they cannot be loaded.', 'ultimate-post-types' );
+		$text .= "\n\n" . __( 'Those post types and taxonomies will not be active until you migrate them, as the structure of Ultimate Post Types 2 is completely different and they cannot be loaded.', 'upt' );
 
 		$text .= "\n\n" . sprintf(
 			'<a href="%s" class="button-secondary uf-button"><span class="dashicons dashicons-hammer uf-button-icon"></span> %s</a>',
 			admin_url( 'edit.php?post_type=ultimate-fields&amp;page=settings&amp;screen=pt-migration' ),
-			__( 'Go to the migration page', 'ultimate-post-types' )
+			__( 'Go to the migration page', 'upt' )
 		);
 
 		echo '<div class="notice notice-info">';

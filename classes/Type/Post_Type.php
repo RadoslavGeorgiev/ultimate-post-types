@@ -69,18 +69,18 @@ class Post_Type extends Type {
 			'supports'            => array( 'title' ),
 
 			'labels' => array(
-				'name'                => __( 'Post Types', 'ultimate-post-types' ),
-				'singular_name'       => __( 'Post Type', 'ultimate-post-types' ),
-				'add_new'             => __( 'Add Post Type', 'ultimate-post-types' ),
-				'add_new_item'        => __( 'Add Post Type', 'ultimate-post-types' ),
-				'edit_item'           => __( 'Edit Post Type', 'ultimate-post-types' ),
-				'new_item'            => __( 'New Post Type', 'ultimate-post-types' ),
-				'view_item'           => __( 'View Post Type', 'ultimate-post-types' ),
-				'search_items'        => __( 'Search Post Types', 'ultimate-post-types' ),
-				'not_found'           => __( 'No Post Types found', 'ultimate-post-types' ),
-				'not_found_in_trash'  => __( 'No Post Types found in Trash', 'ultimate-post-types' ),
-				'parent_item_colon'   => __( 'Parent Post Type:', 'ultimate-post-types' ),
-				'menu_name'           => __( 'Post Types', 'ultimate-post-types' ),
+				'name'                => __( 'Post Types', 'upt' ),
+				'singular_name'       => __( 'Post Type', 'upt' ),
+				'add_new'             => __( 'Add Post Type', 'upt' ),
+				'add_new_item'        => __( 'Add Post Type', 'upt' ),
+				'edit_item'           => __( 'Edit Post Type', 'upt' ),
+				'new_item'            => __( 'New Post Type', 'upt' ),
+				'view_item'           => __( 'View Post Type', 'upt' ),
+				'search_items'        => __( 'Search Post Types', 'upt' ),
+				'not_found'           => __( 'No Post Types found', 'upt' ),
+				'not_found_in_trash'  => __( 'No Post Types found in Trash', 'upt' ),
+				'parent_item_colon'   => __( 'Parent Post Type:', 'upt' ),
+				'menu_name'           => __( 'Post Types', 'upt' ),
 			)
 		);
 
@@ -153,58 +153,58 @@ class Post_Type extends Type {
 	 */
 	public function main_tab_fields() {
 		if ( class_exists( 'Ultimate_Fields\\Pro\\Field\\Icon' ) ) {
-			$icon_field = Field::create( 'icon', 'upt_pt_icon', __( 'Icon', 'ultimate-post-types' ) )
+			$icon_field = Field::create( 'icon', 'upt_pt_icon', __( 'Icon', 'upt' ) )
 				->add_set( 'dashicons' );
 		} else {
-			$icon_field = Field::create( 'text', 'upt_pt_icon', __( 'Icon', 'ultimate-post-types' ) );
+			$icon_field = Field::create( 'text', 'upt_pt_icon', __( 'Icon', 'upt' ) );
 		}
 
 
 		$fields = array(
-			Field::create( 'text', 'upt_pt_slug', __( 'Slug', 'ultimate-post-types' ) )
-				->set_description( __( 'This slug will be used when quierying posts from the post type or in URLs by default. It must be unique and not among the reserved <a href="http://codex.wordpress.org/Function_Reference/register_post_type#Reserved_Post_Types" target="_blank">post types</a>. Please use only lowercase letters, dashes and numbers!', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_pt_slug', __( 'Slug', 'upt' ) )
+				->set_description( __( 'This slug will be used when quierying posts from the post type or in URLs by default. It must be unique and not among the reserved <a href="http://codex.wordpress.org/Function_Reference/register_post_type#Reserved_Post_Types" target="_blank">post types</a>. Please use only lowercase letters, dashes and numbers!', 'upt' ) )
 				->required( '/^[a-z0-9\-]+$/' ),
 			$icon_field
-				->set_description( __( 'This icon wil appear in the admin menu.', 'ultimate-post-types' ) ),
-			Field::create( 'text', 'upt_pt_name', __( 'Plural Name', 'ultimate-post-types' ) )
-				->set_description( __( 'This is plural name of the post type (e.g. Books).', 'ultimate-post-types' ) )
+				->set_description( __( 'This icon wil appear in the admin menu.', 'upt' ) ),
+			Field::create( 'text', 'upt_pt_name', __( 'Plural Name', 'upt' ) )
+				->set_description( __( 'This is plural name of the post type (e.g. Books).', 'upt' ) )
 				->required(),
-			Field::create( 'text', 'upt_pt_singular_name', __( 'Singular Name', 'ultimate-post-types' ) )
-				->set_description( __( 'This is the singular name of the post type (e.g. Book).', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_pt_singular_name', __( 'Singular Name', 'upt' ) )
+				->set_description( __( 'This is the singular name of the post type (e.g. Book).', 'upt' ) )
 				->required(),
-			Field::create( 'checkbox', 'upt_pt_fine_tune', __( 'Fine-tune labels', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_pt_fine_tune', __( 'Fine-tune labels', 'upt' ) )
 				->fancy()
 				->set_default_value( false )
-				->set_text( __( 'All other labels for the post type are generated automatically by using the &quot;Name&quot; &amp; &quot;Singular Name&quot; fields&apos; values. If you want to change a detail in those labels, check this.', 'ultimate-post-types' ) ),
+				->set_text( __( 'All other labels for the post type are generated automatically by using the &quot;Name&quot; &amp; &quot;Singular Name&quot; fields&apos; values. If you want to change a detail in those labels, check this.', 'upt' ) ),
 
-			Field::create( 'section', 'upt_labels_section', __( 'Labels', 'ultimate-post-types' ) )
+			Field::create( 'section', 'upt_labels_section', __( 'Labels', 'upt' ) )
 				->add_dependency( 'upt_pt_fine_tune' ),
-			Field::create( 'text', 'upt_pt_add_new', __( 'Add New', 'ultimate-post-types' ) )
-				->set_description( __( 'The label for adding in the post type&apos;s section (e.g. Add Book).', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_pt_add_new', __( 'Add New', 'upt' ) )
+				->set_description( __( 'The label for adding in the post type&apos;s section (e.g. Add Book).', 'upt' ) )
 				->add_dependency( 'upt_pt_fine_tune' ),
-			Field::create( 'text', 'upt_pt_add_new_item', __( 'Add New Item', 'ultimate-post-types' ) )
-				->set_description( __( 'The adding label that will appear in other places of the admin/front end. (e.g. Add New Book).', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_pt_add_new_item', __( 'Add New Item', 'upt' ) )
+				->set_description( __( 'The adding label that will appear in other places of the admin/front end. (e.g. Add New Book).', 'upt' ) )
 				->add_dependency( 'upt_pt_fine_tune' ),
-			Field::create( 'text', 'upt_pt_edit_item', __( 'Edit Item', 'ultimate-post-types' ) )
-				->set_description( __( 'The Edit Item label (e.g. Edit Book).', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_pt_edit_item', __( 'Edit Item', 'upt' ) )
+				->set_description( __( 'The Edit Item label (e.g. Edit Book).', 'upt' ) )
 				->add_dependency( 'upt_pt_fine_tune' ),
-			Field::create( 'text', 'upt_pt_new_item', __( 'New Item', 'ultimate-post-types' ) )
-				->set_description( __( 'The New Item label (e.g. New Book).', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_pt_new_item', __( 'New Item', 'upt' ) )
+				->set_description( __( 'The New Item label (e.g. New Book).', 'upt' ) )
 				->add_dependency( 'upt_pt_fine_tune' ),
-			Field::create( 'text', 'upt_pt_view_item', __( 'View Item', 'ultimate-post-types' ) )
-				->set_description( __( 'The View Item label (e.g. View Book).', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_pt_view_item', __( 'View Item', 'upt' ) )
+				->set_description( __( 'The View Item label (e.g. View Book).', 'upt' ) )
 				->add_dependency( 'upt_pt_fine_tune' ),
-			Field::create( 'text', 'upt_pt_search_items', __( 'Search Items', 'ultimate-post-types' ) )
-				->set_description( __( 'The Search Items label (e.g. Search Books).', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_pt_search_items', __( 'Search Items', 'upt' ) )
+				->set_description( __( 'The Search Items label (e.g. Search Books).', 'upt' ) )
 				->add_dependency( 'upt_pt_fine_tune' ),
-			Field::create( 'text', 'upt_pt_not_found', __( 'Not Found', 'ultimate-post-types' ) )
-				->set_description( __( 'The Not Found label (e.g. No Books found).', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_pt_not_found', __( 'Not Found', 'upt' ) )
+				->set_description( __( 'The Not Found label (e.g. No Books found).', 'upt' ) )
 				->add_dependency( 'upt_pt_fine_tune' ),
-			Field::create( 'text', 'upt_pt_not_found_in_trash', __( 'Not Found In Trash', 'ultimate-post-types' ) )
-				->set_description( __( 'The Not Found In Trash label (e.g. No Books found in Trash).', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_pt_not_found_in_trash', __( 'Not Found In Trash', 'upt' ) )
+				->set_description( __( 'The Not Found In Trash label (e.g. No Books found in Trash).', 'upt' ) )
 				->add_dependency( 'upt_pt_fine_tune' ),
-			Field::create( 'text', 'upt_pt_parent_item_colon', __( 'Parent Item Colon', 'ultimate-post-types' ) )
-				->set_description( __( 'The Parent Item Colon label (e.g. Parent Book).', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_pt_parent_item_colon', __( 'Parent Item Colon', 'upt' ) )
+				->set_description( __( 'The Parent Item Colon label (e.g. Parent Book).', 'upt' ) )
 				->add_dependency( 'upt_pt_fine_tune' )
 		);
 
@@ -219,121 +219,121 @@ class Post_Type extends Type {
 	 */
 	public function general_tab_fields() {
 		$fields = array(
-			Field::create( 'checkbox', 'upt_pt_hierarchical', __( 'Hierarchical', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_pt_hierarchical', __( 'Hierarchical', 'upt' ) )
 				->set_default_value( true )
 				->fancy()
-				->set_text( __( 'Allows Parent to be specified. In the &apos;supports&apos; tab, please check &apos;page-attributes&apos; to show the parent select box on the editor page.', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_pt_public', __( 'Public', 'ultimate-post-types' ) )
+				->set_text( __( 'Allows Parent to be specified. In the &apos;supports&apos; tab, please check &apos;page-attributes&apos; to show the parent select box on the editor page.', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_pt_public', __( 'Public', 'upt' ) )
 				->set_default_value( true )
 				->fancy()
-				->set_text( __( 'Controls how the type is visible to authors and readers.', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_pt_show_in_menu', __( 'Show In Menu', 'ultimate-post-types' ) )
+				->set_text( __( 'Controls how the type is visible to authors and readers.', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_pt_show_in_menu', __( 'Show In Menu', 'upt' ) )
 				->set_default_value( true )
 				->fancy()
-				->set_text( __( 'Whether to show the post type in the admin menu.', 'ultimate-post-types' ) ),
-			Field::create( 'select', 'upt_pt_menu_placement', __( 'Menu order', 'ultimate-post-types' ) )
+				->set_text( __( 'Whether to show the post type in the admin menu.', 'upt' ) ),
+			Field::create( 'select', 'upt_pt_menu_placement', __( 'Menu order', 'upt' ) )
 				->set_input_type( 'radio' )
 				->set_default_value( 'default' )
 				->add_options(array(
-					'default' => __( 'Default<em>: Appear before the Appearance section</em>', 'ultimate-post-types' ),
-					'index'   => __( 'Specific position', 'ultimate-post-types' )
+					'default' => __( 'Default<em>: Appear before the Appearance section</em>', 'upt' ),
+					'index'   => __( 'Specific position', 'upt' )
 				))
 				->add_dependency( 'upt_pt_show_in_menu' ),
-			Field::create( defined( 'ULTIMATE_FIELDS_PRO' ) ? 'number' : 'text', 'upt_pt_menu_position', __( 'Menu Position', 'ultimate-post-types' ) )
+			Field::create( defined( 'ULTIMATE_FIELDS_PRO' ) ? 'number' : 'text', 'upt_pt_menu_position', __( 'Menu Position', 'upt' ) )
 				->add_dependency( 'upt_pt_show_in_menu' )
 				->add_dependency( 'upt_pt_menu_placement', 'index' )
-				->set_description( __( 'Be careful with this setting, because you might silently overwrite another items as WordPress does not check if the particular position is free.', 'ultimate-post-types' ) ),
-			Field::create( 'section', 'upt_pt_separator_advanced', __( 'Advanced Settings', 'ultimate-post-types' ) )
-				->set_description( __( 'Please don\'t edit those settings unless you really know what you are doing!', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_pt_show_ui', __( 'Show UI', 'ultimate-post-types' ) )
+				->set_description( __( 'Be careful with this setting, because you might silently overwrite another items as WordPress does not check if the particular position is free.', 'upt' ) ),
+			Field::create( 'section', 'upt_pt_separator_advanced', __( 'Advanced Settings', 'upt' ) )
+				->set_description( __( 'Please don\'t edit those settings unless you really know what you are doing!', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_pt_show_ui', __( 'Show UI', 'upt' ) )
 				->set_default_value( true )
 				->fancy()
-				->set_text( __( 'Whether to generate a default UI for managing this post type in the admin.', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_pt_show_in_admin_bar', __( 'Show In Admin Bar', 'ultimate-post-types' ) )
+				->set_text( __( 'Whether to generate a default UI for managing this post type in the admin.', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_pt_show_in_admin_bar', __( 'Show In Admin Bar', 'upt' ) )
 				->set_default_value( true )
 				->fancy()
-				->set_text( __( 'Whether to make this post type available in the WordPress admin bar.', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_pt_show_in_nav_menus', __( 'Show In Nav Menus', 'ultimate-post-types' ) )
-				->set_default_value( true )
-				->add_dependency( 'upt_pt_public' )
-				->fancy()
-				->set_text( __( 'Whether post_type is available for selection in navigation menus.', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_pt_publicly_queryable', __( 'Publicly Queryable', 'ultimate-post-types' ) )
+				->set_text( __( 'Whether to make this post type available in the WordPress admin bar.', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_pt_show_in_nav_menus', __( 'Show In Nav Menus', 'upt' ) )
 				->set_default_value( true )
 				->add_dependency( 'upt_pt_public' )
 				->fancy()
-				->set_text( __( 'Whether queries can be performed on the front end.', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_pt_exclude_from_search', __( 'Exclude from Search', 'ultimate-post-types' ) )
+				->set_text( __( 'Whether post_type is available for selection in navigation menus.', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_pt_publicly_queryable', __( 'Publicly Queryable', 'upt' ) )
 				->set_default_value( true )
 				->add_dependency( 'upt_pt_public' )
 				->fancy()
-				->set_text( __( 'Whether to exclude posts with this post type from front end search results.', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_pt_has_archive', __( 'Has Archive', 'ultimate-post-types' ) )
+				->set_text( __( 'Whether queries can be performed on the front end.', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_pt_exclude_from_search', __( 'Exclude from Search', 'upt' ) )
+				->set_default_value( true )
+				->add_dependency( 'upt_pt_public' )
+				->fancy()
+				->set_text( __( 'Whether to exclude posts with this post type from front end search results.', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_pt_has_archive', __( 'Has Archive', 'upt' ) )
 				->set_default_value( false )
 				->add_dependency( 'upt_pt_public' )
 				->fancy()
-				->set_text( __( 'Enables post type archives.', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_pt_can_export', __( 'Can Export', 'ultimate-post-types' ) )
+				->set_text( __( 'Enables post type archives.', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_pt_can_export', __( 'Can Export', 'upt' ) )
 				->set_default_value( true )
 				->fancy()
-				->set_text( __( 'Can this post type be exported.', 'ultimate-post-types' ) ),
-			Field::create( 'section', 'supports_section', __( 'Supports', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_pt_supports_title', __( 'Title', 'ultimate-post-types' ) )
+				->set_text( __( 'Can this post type be exported.', 'upt' ) ),
+			Field::create( 'section', 'supports_section', __( 'Supports', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_pt_supports_title', __( 'Title', 'upt' ) )
 				->fancy()
-				->set_text( __( 'Allow the post type posts to have a title.', 'ultimate-post-types' ) )
+				->set_text( __( 'Allow the post type posts to have a title.', 'upt' ) )
 				->set_default_value( true ),
-			Field::create( 'checkbox', 'upt_pt_supports_editor', __( 'Editor', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_pt_supports_editor', __( 'Editor', 'upt' ) )
 				->fancy()
 				->set_text( __( 'Allow the post type posts to have content, entered through the TinyMCE (WYSIWYG) editor.' ) )
 				->set_default_value( true ),
-			Field::create( 'checkbox', 'upt_pt_supports_author', __( 'Author', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_pt_supports_author', __( 'Author', 'upt' ) )
 				->fancy()
-				->set_text( __( 'Allow administrators to choose who is the author of the current post.', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_pt_supports_thumbnail', __( 'Thumbnail', 'ultimate-post-types' ) )
+				->set_text( __( 'Allow administrators to choose who is the author of the current post.', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_pt_supports_thumbnail', __( 'Thumbnail', 'upt' ) )
 				->fancy()
-				->set_text( __( 'Allow setting a featured image to the post. <strong>Please</strong> be sure that your theme supprts <strong>post-thumbnails</strong>', 'ultimate-post-types' ) )
+				->set_text( __( 'Allow setting a featured image to the post. <strong>Please</strong> be sure that your theme supprts <strong>post-thumbnails</strong>', 'upt' ) )
 				->set_default_value( false ),
-			Field::create( 'checkbox', 'upt_pt_supports_excerpt', __( 'Excerpt', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_pt_supports_excerpt', __( 'Excerpt', 'upt' ) )
 				->fancy()
-				->set_text( __( 'The WordPress Excerpt is an optional summary or description of a post; in short, a post summary', 'ultimate-post-types' ) )
+				->set_text( __( 'The WordPress Excerpt is an optional summary or description of a post; in short, a post summary', 'upt' ) )
 				->set_default_value( false ),
-			Field::create( 'checkbox', 'upt_pt_supports_trackbacks', __( 'Trackbacks', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_pt_supports_trackbacks', __( 'Trackbacks', 'upt' ) )
 				->fancy()
-				->set_text( __( 'A trackback is a way of cross referencing two blog posts. ', 'ultimate-post-types' ) )
+				->set_text( __( 'A trackback is a way of cross referencing two blog posts. ', 'upt' ) )
 				->set_default_value( false ),
-			Field::create( 'checkbox', 'upt_pt_supports_custom_fields', __( 'Custom Fields', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_pt_supports_custom_fields', __( 'Custom Fields', 'upt' ) )
 				->fancy()
-				->set_text( __( 'Allow managing custom fields by the default WordPress way. If you are planning to add fields generated by Ultimate Fields, you will prefer to leave this unchecked!', 'ultimate-post-types' ) )
+				->set_text( __( 'Allow managing custom fields by the default WordPress way. If you are planning to add fields generated by Ultimate Fields, you will prefer to leave this unchecked!', 'upt' ) )
 				->set_default_value( false ),
-			Field::create( 'checkbox', 'upt_pt_supports_comments', __( 'Comments', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_pt_supports_comments', __( 'Comments', 'upt' ) )
 				->fancy()
 				->set_text( 'Enable (also will see comment count balloon on edit screen)' )
 				->set_default_value( true ),
-			Field::create( 'checkbox', 'upt_pt_supports_revisions', __( 'Revisions', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_pt_supports_revisions', __( 'Revisions', 'upt' ) )
 				->fancy()
-				->set_text( __( 'Allow the storing of revisions', 'ultimate-post-types' ) )
+				->set_text( __( 'Allow the storing of revisions', 'upt' ) )
 				->set_default_value( true ),
-			Field::create( 'checkbox', 'upt_pt_supports_page_attributes', __( 'Page Attributes', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_pt_supports_page_attributes', __( 'Page Attributes', 'upt' ) )
 				->fancy()
-				->set_text( __( 'Display a box that contains the menu order field, or parent option for hierarchical post types.', 'ultimate-post-types' ) )
+				->set_text( __( 'Display a box that contains the menu order field, or parent option for hierarchical post types.', 'upt' ) )
 				->set_default_value( true ),
-			Field::create( 'checkbox', 'upt_pt_supports_post_formats', __( 'Post Formats', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_pt_supports_post_formats', __( 'Post Formats', 'upt' ) )
 				->fancy()
-				->set_text( __( 'Allow the post type to have formats like video, photo, quote, etc. Select the formats in the next field.', 'ultimate-post-types' ) )
+				->set_text( __( 'Allow the post type to have formats like video, photo, quote, etc. Select the formats in the next field.', 'upt' ) )
 				->set_default_value( false ),
-			Field::create( 'multiselect', 'upt_pt_formats', __( 'Supported Formats', 'ultimate-post-types' ) )
+			Field::create( 'multiselect', 'upt_pt_formats', __( 'Supported Formats', 'upt' ) )
 				->set_input_type( 'checkbox' )
 				->set_default_value( array() )
 				->add_options(array(
-					'aside'   => __( 'Aside', 'ultimate-post-types' ),
-					'audio'   => __( 'Audio', 'ultimate-post-types' ),
-					'chat'    => __( 'Chat', 'ultimate-post-types' ),
-					'gallery' => __( 'Gallery', 'ultimate-post-types' ),
-					'image'   => __( 'Image', 'ultimate-post-types' ),
-					'link'    => __( 'Link', 'ultimate-post-types' ),
-					'quote'   => __( 'Quote', 'ultimate-post-types' ),
-					'status'  => __( 'Status', 'ultimate-post-types' ),
-					'video'   => __( 'Video', 'ultimate-post-types' )
+					'aside'   => __( 'Aside', 'upt' ),
+					'audio'   => __( 'Audio', 'upt' ),
+					'chat'    => __( 'Chat', 'upt' ),
+					'gallery' => __( 'Gallery', 'upt' ),
+					'image'   => __( 'Image', 'upt' ),
+					'link'    => __( 'Link', 'upt' ),
+					'quote'   => __( 'Quote', 'upt' ),
+					'status'  => __( 'Status', 'upt' ),
+					'video'   => __( 'Video', 'upt' )
 				))
 				->add_dependency( 'upt_pt_supports_post_formats' )
 		);
@@ -349,22 +349,22 @@ class Post_Type extends Type {
 	 */
 	public function urls_tab_fields() {
 		$fields = array(
-			Field::create( 'checkbox', 'upt_pt_rewrite_enable', __( 'Enable URL rewrite', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_pt_rewrite_enable', __( 'Enable URL rewrite', 'upt' ) )
 				->set_default_value( true )
-				->set_text( __( 'Enable', 'ultimate-post-types' ) )
+				->set_text( __( 'Enable', 'upt' ) )
 				->fancy(),
 
-			Field::create( 'text', 'upt_pt_rewrite_slug', __( 'Slug', 'ultimate-post-types' ) )
-				->set_description( __( 'Customize the permalink structure slug, ex. <strong>books</strong>/', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_pt_rewrite_with_front', __( 'With Front', 'ultimate-post-types' ) )
-				->set_text( __( 'Include the blog base for the URLs of this post type.', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_pt_rewrite_slug', __( 'Slug', 'upt' ) )
+				->set_description( __( 'Customize the permalink structure slug, ex. <strong>books</strong>/', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_pt_rewrite_with_front', __( 'With Front', 'upt' ) )
+				->set_text( __( 'Include the blog base for the URLs of this post type.', 'upt' ) )
 				->fancy(),
-			Field::create( 'checkbox', 'upt_pt_rewrite_feeds', __( 'Feeds', 'ultimate-post-types' ) )
-				->set_text( __( 'Should a feed permalink structure be built for this post type.', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_pt_rewrite_feeds', __( 'Feeds', 'upt' ) )
+				->set_text( __( 'Should a feed permalink structure be built for this post type.', 'upt' ) )
 				->set_default_value( true )
 				->fancy(),
-			Field::create( 'checkbox', 'upt_pt_rewrite_pages', __( 'Pages', 'ultimate-post-types' ) )
-				->set_text( __( 'Should the permalink structure provide for pagination.', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_pt_rewrite_pages', __( 'Pages', 'upt' ) )
+				->set_text( __( 'Should the permalink structure provide for pagination.', 'upt' ) )
 				->set_default_value( true )
 				->fancy(),
 		);
@@ -380,7 +380,7 @@ class Post_Type extends Type {
 	 */
 	public function fields_tab_fields() {
 		$fields = array(
-			Field::create( 'fields', 'upt_pt_fields', __( 'Fields', 'ultimate-post-types' ) )
+			Field::create( 'fields', 'upt_pt_fields', __( 'Fields', 'upt' ) )
 				// ->hide_label()
 				->set_attr( array(
 					'class' => 'upt-fields'
@@ -398,21 +398,21 @@ class Post_Type extends Type {
 	 */
 	public function layout_tab_fields() {
 		$templates = array(
-			'single' => __( 'Use the post template.', 'ultimate-post-types' ),
-			'page' => __( 'Use the default page template.', 'ultimate-post-types' )
+			'single' => __( 'Use the post template.', 'upt' ),
+			'page' => __( 'Use the default page template.', 'upt' )
 		);
 
 		foreach ( wp_get_theme()->get_page_templates() as $template => $name ) {
-			$templates[ $template ] = sprintf( __( 'Use the &quot;%s&quot; page template.', 'ultimate-post-types' ), $name );
+			$templates[ $template ] = sprintf( __( 'Use the &quot;%s&quot; page template.', 'upt' ), $name );
 		}
 
 		$fields = array(
-			Field::create( 'select', 'upt_pt_template_type', __( 'Template Type', 'ultimate-post-types' ) )
+			Field::create( 'select', 'upt_pt_template_type', __( 'Template Type', 'upt' ) )
 				->set_input_type( 'radio' )
 				->add_options( $templates )
 				->set_default_value( 'single' ),
-			Field::create( 'wysiwyg', 'upt_pt_before_content', __( 'Before Content', 'ultimate-post-types' ) ),
-			Field::create( 'wysiwyg', 'upt_pt_after_content', __( 'After Content', 'ultimate-post-types' ) )
+			Field::create( 'wysiwyg', 'upt_pt_before_content', __( 'Before Content', 'upt' ) ),
+			Field::create( 'wysiwyg', 'upt_pt_after_content', __( 'After Content', 'upt' ) )
 				->set_description( __( 'This content will be displayed before/after the content of the post type, in the template that is selected above. You can use shorcodes like [value key="meta_key"] to display values that are associated with the current post type in order to create a template for it. <strong>meta_key</strong> is the key of the field as created int the <strong>Fields</strong> tab.' ) )
 		);
 
@@ -430,9 +430,9 @@ class Post_Type extends Type {
 	public function manage_columns( $columns ) {
 		unset( $columns[ 'date' ] );
 
-		$columns[ 'slug' ]     = __( 'Slug', 'ultimate-post-types' );
-		$columns[ 'singular' ] = __( 'Singular name', 'ultimate-post-types' );
-		$columns[ 'plural' ]   = __( 'Plural name', 'ultimate-post-types' );
+		$columns[ 'slug' ]     = __( 'Slug', 'upt' );
+		$columns[ 'singular' ] = __( 'Singular name', 'upt' );
+		$columns[ 'plural' ]   = __( 'Plural name', 'upt' );
 
 		return $columns;
 	}
@@ -478,7 +478,7 @@ class Post_Type extends Type {
 			return $messages;
 		}
 
-		$message = __( 'Taxonomy saved.', 'ultimate-post-types' );
+		$message = __( 'Taxonomy saved.', 'upt' );
 		$messages[ 'post' ][ 1 ] = $messages[ 'post' ][ 6 ] = $message;
 
 		return $messages;
@@ -503,7 +503,7 @@ class Post_Type extends Type {
 		}
 
 		$groups[] = array(
-			'label'   => __( 'Post Types', 'ultimate-post-types' ),
+			'label'   => __( 'Post Types', 'upt' ),
 			'options' => $options
 		);
 

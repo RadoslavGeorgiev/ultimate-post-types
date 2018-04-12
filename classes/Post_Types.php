@@ -58,9 +58,12 @@ class Post_Types {
 		# If needed, this will flush rewrites after saving.
 		add_action( 'init', array( $this, 'init' ) );
 
-		/**
-		 * @todo: Add translations
-		 */
+
+
+		// Load translations
+		if( defined( 'UPT_LANGUAGES_DIR' ) ) {
+			load_plugin_textdomain( 'upt', false, UPT_LANGUAGES_DIR );
+		}
 
 		# Exclude the post types for managing UPT from being listed as options
 		add_filter( 'uf.excluded_post_types', array( $this, 'exclude_own_post_types' ) );
@@ -141,7 +144,7 @@ class Post_Types {
 	 * @since 3.0
 	 */
 	public function missing_parent_notice() {
-		$message = __( 'The Ultimate Post Types plugin is active, but it will not work until it&apos;s dependency &quot;Ultimate Fields&quot; is active too. Please <a href="https://www.ultimate-fields.com/docs/quick-start/installation/" target="_blank">install Ultimate Fields</a>.', 'ultimate-post-types' );
+		$message = __( 'The Ultimate Post Types plugin is active, but it will not work until it&apos;s dependency &quot;Ultimate Fields&quot; is active too. Please <a href="https://www.ultimate-fields.com/docs/quick-start/installation/" target="_blank">install Ultimate Fields</a>.', 'upt' );
 
 		echo '<div id="message" class="notice fatal error">' . wpautop( $message ) . '</div>';
 	}

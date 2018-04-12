@@ -42,7 +42,7 @@ class Taxonomy extends Controller {
 			'new_item_name'              => sprintf( __( 'New %s Name',                  'ultimate-post-types' ), $singular ),
 			'separate_items_with_commas' => sprintf( __( 'Separate %s with commas',      'ultimate-post-types' ), $plural   ),
 			'add_or_remove_items'        => sprintf( __( 'Add or remove %s',             'ultimate-post-types' ), $plural   ),
-			'choose_from_most_used'      => sprintf( __( 'Choose from the most used %s', 'ultimate-post-types' ), $plural   ),
+			'choose_from_most_used'      => sprintf( __( 'Choose from the most used %s', 'upt' ), $plural   ),
 			'not_found'                  => sprintf( __( 'No %s found.',                 'ultimate-post-types' ), $plural   )
 		);
 

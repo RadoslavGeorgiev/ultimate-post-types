@@ -57,18 +57,18 @@ class Taxonomy extends Type {
 			'supports'            => array( 'title' ),
 
 			'labels' => array(
-				'name'                => __( 'Taxonomies', 'ultimate-post-types' ),
-				'singular_name'       => __( 'Taxonomy', 'ultimate-post-types' ),
-				'add_new'             => __( 'Add Taxonomy', 'ultimate-post-types' ),
-				'add_new_item'        => __( 'Add Taxonomy', 'ultimate-post-types' ),
-				'edit_item'           => __( 'Edit Taxonomy', 'ultimate-post-types' ),
-				'new_item'            => __( 'New Taxonomy', 'ultimate-post-types' ),
-				'view_item'           => __( 'View Taxonomy', 'ultimate-post-types' ),
-				'search_items'        => __( 'Search Taxonomies', 'ultimate-post-types' ),
-				'not_found'           => __( 'No Taxonomies found', 'ultimate-post-types' ),
-				'not_found_in_trash'  => __( 'No Taxonomies found in Trash', 'ultimate-post-types' ),
-				'parent_item_colon'   => __( 'Parent Taxonomy:', 'ultimate-post-types' ),
-				'menu_name'           => __( 'Taxonomies', 'ultimate-post-types' ),
+				'name'                => __( 'Taxonomies', 'upt' ),
+				'singular_name'       => __( 'Taxonomy', 'upt' ),
+				'add_new'             => __( 'Add Taxonomy', 'upt' ),
+				'add_new_item'        => __( 'Add Taxonomy', 'upt' ),
+				'edit_item'           => __( 'Edit Taxonomy', 'upt' ),
+				'new_item'            => __( 'New Taxonomy', 'upt' ),
+				'view_item'           => __( 'View Taxonomy', 'upt' ),
+				'search_items'        => __( 'Search Taxonomies', 'upt' ),
+				'not_found'           => __( 'No Taxonomies found', 'upt' ),
+				'not_found_in_trash'  => __( 'No Taxonomies found in Trash', 'upt' ),
+				'parent_item_colon'   => __( 'Parent Taxonomy:', 'upt' ),
+				'menu_name'           => __( 'Taxonomies', 'upt' ),
 			)
 		);
 
@@ -97,13 +97,13 @@ class Taxonomy extends Type {
 	public function register_fields() {
 		$fields = array();
 
-		$fields[] = Field::create( 'tab', 'main_tab', __( 'Slug & Labels', 'ultimate-post-types' ) )
+		$fields[] = Field::create( 'tab', 'main_tab', __( 'Slug & Labels', 'upt' ) )
 			->set_icon( 'dashicons dashicons-list-view' );
 		$fields = array_merge( $fields, $this->main_tab_fields() );
-		$fields[] = Field::create( 'tab', 'general_tab', __( 'General Settings', 'ultimate-post-types' ) )
+		$fields[] = Field::create( 'tab', 'general_tab', __( 'General Settings', 'upt' ) )
 			->set_icon( 'dashicons dashicons-admin-generic' );
 		$fields = array_merge( $fields, $this->general_tab_fields() );
-		$fields[] = Field::create( 'tab', 'urls_tab', __( 'URLs', 'ultimate-post-types' ) )
+		$fields[] = Field::create( 'tab', 'urls_tab', __( 'URLs', 'upt' ) )
 			->set_icon( 'dashicons dashicons-admin-site' );
 		$fields = array_merge( $fields, $this->urls_tab_fields() );
 		$fields[] = Field::create( 'tab', 'fields_tab', __( 'Fields', 'uf' ) )
@@ -134,56 +134,56 @@ class Taxonomy extends Type {
 	 */
 	public function main_tab_fields() {
 		$fields = array(
-			Field::create( 'text', 'upt_tax_slug', __( 'Slug', 'ultimate-post-types' ) )
-				->set_description( __( 'This slug will be used when quierying posts from the post type or in URLs by default. Please use only lowercase letters, dashes and numbers!', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_tax_slug', __( 'Slug', 'upt' ) )
+				->set_description( __( 'This slug will be used when quierying posts from the post type or in URLs by default. Please use only lowercase letters, dashes and numbers!', 'upt' ) )
 				->required( '/^[a-z0-9\-]+$/' ),
-			Field::create( 'text', 'upt_tax_name', __( 'Plural Name', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_tax_name', __( 'Plural Name', 'upt' ) )
 				->required()
-				->set_description( __( 'This is plural name of the taxonomy (e.g. Categories).', 'ultimate-post-types' ) ),
-			Field::create( 'text', 'upt_tax_singular_name', __( 'Singular Name', 'ultimate-post-types' ) )
+				->set_description( __( 'This is plural name of the taxonomy (e.g. Categories).', 'upt' ) ),
+			Field::create( 'text', 'upt_tax_singular_name', __( 'Singular Name', 'upt' ) )
 				->required()
-				->set_description( __( 'This is the singular name of the taxonomy (e.g. Category).', 'ultimate-post-types' ) ),
-			Field::create( 'multiselect', 'upt_tax_post_types', __( 'Post Types', 'ultimate-post-types' ) )
+				->set_description( __( 'This is the singular name of the taxonomy (e.g. Category).', 'upt' ) ),
+			Field::create( 'multiselect', 'upt_tax_post_types', __( 'Post Types', 'upt' ) )
 				->set_input_type( 'checkbox' )
 				->set_options_callback( array( $this, 'get_post_type_options' ) )
 				->required()
-				->set_description( __( 'The taxonomy will be associated with those post types.', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_tax_fine_tune', __( 'Fine tune labels', 'ultimate-post-types' ) )
+				->set_description( __( 'The taxonomy will be associated with those post types.', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_tax_fine_tune', __( 'Fine tune labels', 'upt' ) )
 				->fancy()
 				->set_default_value( false )
-				->set_text( __( 'All other labels for the taxonomy are generated automatically by using the "Name" & "Singular Name" fields&apos; values. If you want to change a detail in those labels, check this.', 'ultimate-post-types' ) ),
-			Field::create( 'text', 'upt_tax_add_new_item', __( 'Add New Item', 'ultimate-post-types' ) )
-				->set_description( __( 'The adding label that will appear in other places of the admin/front end. (e.g. Add New Page).', 'ultimate-post-types' ) )
+				->set_text( __( 'All other labels for the taxonomy are generated automatically by using the "Name" & "Singular Name" fields&apos; values. If you want to change a detail in those labels, check this.', 'upt' ) ),
+			Field::create( 'text', 'upt_tax_add_new_item', __( 'Add New Item', 'upt' ) )
+				->set_description( __( 'The adding label that will appear in other places of the admin/front end. (e.g. Add New Page).', 'upt' ) )
 				->add_dependency( 'upt_tax_fine_tune' ),
-			Field::create( 'text', 'upt_tax_edit_item', __( 'Edit Item', 'ultimate-post-types' ) )
-				->set_description( __( 'The Edit Item label (e.g. Edit Page).', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_tax_edit_item', __( 'Edit Item', 'upt' ) )
+				->set_description( __( 'The Edit Item label (e.g. Edit Page).', 'upt' ) )
 				->add_dependency( 'upt_tax_fine_tune' ),
-			Field::create( 'text', 'upt_tax_search_items', __( 'Search Items', 'ultimate-post-types' ) )
-				->set_description( __( 'The Search Items label (e.g. Search Pages).', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_tax_search_items', __( 'Search Items', 'upt' ) )
+				->set_description( __( 'The Search Items label (e.g. Search Pages).', 'upt' ) )
 				->add_dependency( 'upt_tax_fine_tune' ),
-			Field::create( 'text', 'upt_tax_not_found', __( 'Not Found', 'ultimate-post-types' ) )
-				->set_description( __( 'The Not Found label (e.g. No Pages found).', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_tax_not_found', __( 'Not Found', 'upt' ) )
+				->set_description( __( 'The Not Found label (e.g. No Pages found).', 'upt' ) )
 				->add_dependency( 'upt_tax_fine_tune' ),
-			Field::create( 'text', 'upt_tax_parent_item_colon', __( 'Parent Item Colon', 'ultimate-post-types' ) )
-				->set_description( __( 'The Parent Item Colon label (e.g. Parent Page).', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_tax_parent_item_colon', __( 'Parent Item Colon', 'upt' ) )
+				->set_description( __( 'The Parent Item Colon label (e.g. Parent Page).', 'upt' ) )
 				->add_dependency( 'upt_tax_fine_tune' ),
-			Field::create( 'text', 'upt_tax_popular_items', __( 'Popular Items', 'ultimate-post-types' ) )
-				->set_description( __( 'Popular Writers', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_tax_popular_items', __( 'Popular Items', 'upt' ) )
+				->set_description( __( 'Popular Writers', 'upt' ) )
 				->add_dependency( 'upt_tax_fine_tune' ),
-			Field::create( 'text', 'upt_tax_all_items', __( 'All Items', 'ultimate-post-types' ) )
-				->set_description( __( 'Ex. All Writers', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_tax_all_items', __( 'All Items', 'upt' ) )
+				->set_description( __( 'Ex. All Writers', 'upt' ) )
 				->add_dependency( 'upt_tax_fine_tune' ),
-			Field::create( 'text', 'upt_tax_new_item_name', __( 'New Item Name', 'ultimate-post-types' ) )
-				->set_description( __( 'New Writer Name', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_tax_new_item_name', __( 'New Item Name', 'upt' ) )
+				->set_description( __( 'New Writer Name', 'upt' ) )
 				->add_dependency( 'upt_tax_fine_tune' ),
-			Field::create( 'text', 'upt_tax_separate_items_with_commas', __( 'Separate Items With Commas', 'ultimate-post-types' ) )
-				->set_description( __( 'Separate writers with commas', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_tax_separate_items_with_commas', __( 'Separate Items With Commas', 'upt' ) )
+				->set_description( __( 'Separate writers with commas', 'upt' ) )
 				->add_dependency( 'upt_tax_fine_tune' ),
-			Field::create( 'text', 'upt_tax_add_or_remove_items', __( 'Add Or Remove Items', 'ultimate-post-types' ) )
-				->set_description( __( 'Add or remove writers', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_tax_add_or_remove_items', __( 'Add Or Remove Items', 'upt' ) )
+				->set_description( __( 'Add or remove writers', 'upt' ) )
 				->add_dependency( 'upt_tax_fine_tune' ),
-			Field::create( 'text', 'upt_tax_choose_from_most_used', __( 'Choose From Most Used', 'ultimate-post-types' ) )
-				->set_description( __( 'Choose from the most used writers', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_tax_choose_from_most_used', __( 'Choose From Most Used', 'upt' ) )
+				->set_description( __( 'Choose from the most used writers', 'upt' ) )
 				->add_dependency( 'upt_tax_fine_tune' ),
 		);
 
@@ -198,28 +198,28 @@ class Taxonomy extends Type {
 	 */
 	public function general_tab_fields() {
 		$fields = array(
-			Field::create( 'checkbox', 'upt_tax_hierarchical', __( 'Hierarchical', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_tax_hierarchical', __( 'Hierarchical', 'upt' ) )
 				->fancy()
 				->set_default_value( true )
-				->set_text( __( 'Allows Parent to be specified. Also, non-hierarchical taxonomies work like tags, meaning that on post type screens the user has to manually enter terms manually.', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_tax_public', __( 'Public', 'ultimate-post-types' ) )
+				->set_text( __( 'Allows Parent to be specified. Also, non-hierarchical taxonomies work like tags, meaning that on post type screens the user has to manually enter terms manually.', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_tax_public', __( 'Public', 'upt' ) )
 				->fancy()
 				->set_default_value( true )
-				->set_text( __( 'Controls how the type is visible to authors and readers.', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_tax_show_ui', __( 'Show UI', 'ultimate-post-types' ) )
+				->set_text( __( 'Controls how the type is visible to authors and readers.', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_tax_show_ui', __( 'Show UI', 'upt' ) )
 				->fancy()
 				->set_default_value( true )
-				->set_text( __( 'Whether to generate a default UI for managing this taxonomy in the admin.', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_tax_show_in_nav_menus', __( 'Show In Nav Menus', 'ultimate-post-types' ) )
-				->fancy()
-				->set_default_value( true )
-				->add_dependency( 'upt_tax_public' )
-				->set_text( __( 'Whether the taxonomy is available for selection in navigation menus.', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_tax_show_admin_column', __( 'Show admin column', 'ultimate-post-types' ) )
+				->set_text( __( 'Whether to generate a default UI for managing this taxonomy in the admin.', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_tax_show_in_nav_menus', __( 'Show In Nav Menus', 'upt' ) )
 				->fancy()
 				->set_default_value( true )
 				->add_dependency( 'upt_tax_public' )
-				->set_text( __( 'Show the taxonomy terms in the post type listing.', 'ultimate-post-types' ) ),
+				->set_text( __( 'Whether the taxonomy is available for selection in navigation menus.', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_tax_show_admin_column', __( 'Show admin column', 'upt' ) )
+				->fancy()
+				->set_default_value( true )
+				->add_dependency( 'upt_tax_public' )
+				->set_text( __( 'Show the taxonomy terms in the post type listing.', 'upt' ) ),
 		);
 
 		return $fields;
@@ -233,13 +233,13 @@ class Taxonomy extends Type {
 	 */
 	public function urls_tab_fields() {
 		$fields = array(
-			Field::create( 'checkbox', 'upt_tax_rewrite_enable', __( 'Enable URL rewrite', 'ultimate-post-types' ) )
+			Field::create( 'checkbox', 'upt_tax_rewrite_enable', __( 'Enable URL rewrite', 'upt' ) )
 				->fancy(),
-			Field::create( 'text', 'upt_tax_rewrite_slug', __( 'Slug', 'ultimate-post-types' ) )
-				->set_description( __( 'Customize the permalink structure slug, ex. <strong>genre</strong>/', 'ultimate-post-types' ) ),
-			Field::create( 'checkbox', 'upt_tax_rewrite_with_front', __( 'With Front', 'ultimate-post-types' ) )
+			Field::create( 'text', 'upt_tax_rewrite_slug', __( 'Slug', 'upt' ) )
+				->set_description( __( 'Customize the permalink structure slug, ex. <strong>genre</strong>/', 'upt' ) ),
+			Field::create( 'checkbox', 'upt_tax_rewrite_with_front', __( 'With Front', 'upt' ) )
 				->fancy()
-				->set_text( __( 'Include the blog base for the URLs of this taxonomy.', 'ultimate-post-types' ) )
+				->set_text( __( 'Include the blog base for the URLs of this taxonomy.', 'upt' ) )
 				->set_default_value( false )
 		);
 
@@ -254,7 +254,7 @@ class Taxonomy extends Type {
 	 */
 	public function fields_tab_fields() {
 		$fields = array(
-			Field::create( 'fields', 'upt_tax_fields', __( 'Fields', 'ultimate-post-types' ) )
+			Field::create( 'fields', 'upt_tax_fields', __( 'Fields', 'upt' ) )
 				->set_attr(array(
 					'class' => 'upt-fields'
 				))
@@ -309,9 +309,9 @@ HTML;
 	public function manage_columns( $columns ) {
 		unset( $columns[ 'date' ] );
 
-		$columns[ 'slug' ]     = __( 'Slug', 'ultimate-post-types' );
-		$columns[ 'singular' ] = __( 'Singular name', 'ultimate-post-types' );
-		$columns[ 'plural' ]   = __( 'Plural name', 'ultimate-post-types' );
+		$columns[ 'slug' ]     = __( 'Slug', 'upt' );
+		$columns[ 'singular' ] = __( 'Singular name', 'upt' );
+		$columns[ 'plural' ]   = __( 'Plural name', 'upt' );
 
 		return $columns;
 	}
@@ -357,7 +357,7 @@ HTML;
 			return $messages;
 		}
 
-		$message = __( 'Taxonomy saved.', 'ultimate-post-types' );
+		$message = __( 'Taxonomy saved.', 'upt' );
 		$messages[ 'post' ][ 1 ] = $messages[ 'post' ][ 6 ] = $message;
 
 		return $messages;
@@ -382,7 +382,7 @@ HTML;
 		}
 
 		$groups[] = array(
-			'label'   => __( 'Taxonomies', 'ultimate-post-types' ),
+			'label'   => __( 'Taxonomies', 'upt' ),
 			'options' => $options
 		);
 
